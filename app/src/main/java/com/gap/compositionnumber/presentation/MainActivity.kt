@@ -1,7 +1,8 @@
-package com.gap.compositionnumber
+package com.gap.compositionnumber.presentation
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.gap.compositionnumber.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
