@@ -1,10 +1,12 @@
 package com.gap.compositionnumber.domain.entities
 
-import java.io.Serializable
+import android.os.Parcelable
+import kotlinx.parcelize.Parcelize
 
+@Parcelize
 data class GameResult(
     val winner: Boolean,
     val countOfRightAnswer: Int,
     val countOfQuestion: Int,
     val gameSettings: GameSettings
-): Serializable
+) : Parcelable

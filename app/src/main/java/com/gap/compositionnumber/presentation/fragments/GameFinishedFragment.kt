@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import com.gap.compositionnumber.databinding.FragmentGameFinishedBinding
 import com.gap.compositionnumber.domain.entities.GameResult
+import com.gap.compositionnumber.domain.entities.GameSettings
 
 class GameFinishedFragment : Fragment() {
 
@@ -24,7 +25,9 @@ class GameFinishedFragment : Fragment() {
     }
 
     private fun parseArgs() {
-        gameResult = requireArguments().getSerializable(KEY_GAME_RESULT) as GameResult
+        requireArguments().getParcelable<GameResult>(KEY_GAME_RESULT)?.let {
+            gameResult = it
+        }
     }
 
     override fun onCreateView(
@@ -66,7 +69,7 @@ class GameFinishedFragment : Fragment() {
         private const val KEY_GAME_RESULT = "result"
         fun newInstance(gameResult: GameResult): GameFinishedFragment {
             val args = Bundle()
-            args.putSerializable(KEY_GAME_RESULT, gameResult)
+            args.putParcelable(KEY_GAME_RESULT, gameResult)
             val fragment = GameFinishedFragment()
             fragment.arguments = args
             return fragment
@@ -75,7 +78,7 @@ class GameFinishedFragment : Fragment() {
         fun newInstanceKotlinVol(gameResult: GameResult): GameFinishedFragment {
             return GameFinishedFragment().apply {
                 arguments = Bundle().apply {
-                    putSerializable(KEY_GAME_RESULT, gameResult)
+                    putParcelable(KEY_GAME_RESULT, gameResult)
                 }
             }
         }

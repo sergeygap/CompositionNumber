@@ -24,7 +24,9 @@ class GameFragment : Fragment() {
     }
 
     private fun parseParams() {
-        level = requireArguments().getSerializable(KEY_LEVEL) as Level
+        requireArguments().getParcelable<Level>(KEY_LEVEL)?.let {
+            level = it
+        }
     }
 
     override fun onCreateView(
@@ -71,7 +73,7 @@ class GameFragment : Fragment() {
             // args with Bundle
             val gameFragment = GameFragment()
             val args = Bundle()
-            args.putSerializable(KEY_LEVEL, level)
+            args.putParcelable(KEY_LEVEL, level)
             gameFragment.arguments = args
             return gameFragment
         }
