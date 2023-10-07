@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/choose_level"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/testButton"
+        style="@style/choose_level_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@android:color/darker_gray"
+        android:text="@string/test" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/easyButton"
+        style="@style/choose_level_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="4dp"
+        android:backgroundTint="@android:color/holo_green_light"
+        android:text="@string/easy" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        style="@style/choose_level_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="4dp"
+        android:backgroundTint="@android:color/holo_orange_light"
+        android:text="@string/middle" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        style="@style/choose_level_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="4dp"
+        android:backgroundTint="@android:color/holo_red_dark"
+        android:text="@string/hard" />
+
+</LinearLayout>

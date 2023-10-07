@@ -9,4 +9,9 @@
         быть число 3, потому что 3 + 4 = 7
     </string>
     <string name="composition_number">Состав числа</string>
+    <string name="choose_level">Выберете уровень</string>
+    <string name="test">TEST</string>
+    <string name="easy">EASY</string>
+    <string name="middle">middle</string>
+    <string name="hard">hard</string>
 </resources>
